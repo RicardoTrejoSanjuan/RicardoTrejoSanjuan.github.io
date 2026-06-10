@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>RicardoTrejoSanjuan.github.io</title>
     <title>Portfolio under construction</title>
     <style>
+      /* Modern CSS Reset & Variable Definitions matching a sleek Fluent/Tech aesthetic */
       :root {
         --bg-primary: #11100f;
         --bg-secondary: #201f1e;
         --text-primary: #ffffff;
         --text-secondary: #a19f9d;
         --accent-blue: #0078d4;
-        --font-stack: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        --accent-green: #107c41;
+        --font-stack:
+          "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
       }
 
       * {
@@ -30,6 +31,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow-x: hidden;
         padding: 20px;
       }
 
@@ -45,6 +47,21 @@
         animation: fadeIn 0.8s ease-out;
       }
 
+      .image-container {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto 30px auto;
+        position: relative;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
+      /* Subtle pulsing light to make it striking */
       .status-badge {
         display: inline-flex;
         align-items: center;
@@ -55,6 +72,7 @@
         border-radius: 20px;
         font-size: 14px;
         font-weight: 600;
+        letter-spacing: 0.5px;
         text-transform: uppercase;
         margin-bottom: 24px;
       }
@@ -65,11 +83,14 @@
         background-color: var(--accent-blue);
         border-radius: 50%;
         margin-right: 8px;
+        box-shadow: 0 0 8px var(--accent-blue);
         animation: pulse 2s infinite;
       }
 
       h1 {
         font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
         margin-bottom: 16px;
         background: linear-gradient(135deg, #ffffff 0%, #a19f9d 100%);
         -webkit-background-clip: text;
@@ -102,6 +123,7 @@
         font-family: monospace;
       }
 
+      /* Animations */
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -124,18 +146,38 @@
           box-shadow: 0 0 0 0 rgba(0, 120, 212, 0);
         }
       }
+
+      /* Responsive improvements */
+      @media (max-width: 600px) {
+        .container {
+          padding: 30px 15px;
+        }
+        h1 {
+          font-size: 26px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <!-- Status Indicator -->
       <div class="status-badge">
-        <span class="status-dot"></span>Development In Progress
+        <span class="status-dot"></span>
+        Development In Progress
       </div>
 
+      <!-- Inline Visual Image Graphics -->
       <div class="image-container">
-        <img src="data:image/svg+xml;base64,..." alt="In Progress" />
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZDEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDA3OGQ0O3N0b3Atb3BhY2l0eToxIiAvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxMDdjNDE7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQyIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzIwMWYxZTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjkyODI3O3N0b3Atb3BhY2l0eToxIiAvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICAKICAgIDwhLS0gQmFja2dyb3VuZCBlbGVtZW50cyAtLT4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZDIpIiByeD0iMjAiLz4KICAgIAogICAgPCEtLSBHcmlkIFBhdHRlcm4gLS0+CiAgICA8ZyBvcGFjaXR5PSIwLjA1Ij4KICAgICAgICA8cGF0aCBkPSJNIDAsNTAgTCA4MDAsNTAgTSAwLDEwMCBMIDgwMCwxMDAgTSAwLDE1MCBMIDgwMCwxNTAgTSAwLDIwMCBMIDgwMCwyMDAgTSAwLDI1MCBMIDgwMCwyNTAgTSAwLDMwMCBMIDgwMCwzMDAgTSAwLDM1MCBMIDgwMCwzNTAgTSAwLDQwMCBMIDgwMCw0MDAgTSAwLDQ1MCBMIDgwMCw0NTAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAgICAgPHBhdGggZD0iTSA1MCwwIEwgNTAsNTAwIE0gMTAwLDAgTCAxMDAsNTAwIE0gMTUwLDAgTCAxNTAsNTAwIE0gMjAwLDAgTCAyMDAsNTAwIE0gMjUwLDAgTCAyNTAsNTAwIE0gMzAwLDAgTCAzMDAsNTAwIE0gMzUwLDAgTCAzNTAsNTAwIE0gNDAwLDAgTCA0MDAsNTAwIE0gNDUwLDAgTCA0NTAsNTAwIE0gNTAwLDAgTCA1MDAsNTAwIE0gNTUwLDAgTCA1NTAsNTAwIE0gNjAwLDAgTCA2MDAsNTAwIE0gNjUwLDAgTCA2NTAsNTAwIE0gNzAwLDAgTCA3MDAsNTAwIE0gNzUwLDAgTCA3NTAsNTAwIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9nPgoKICAgIDwhLS0gQWJzdHJhY3QgQ29kZSAvIExheW91dCBXaW5kb3dzIChEYXNoYm9hcmQgcmVwcmVzZW50YXRpb24pIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUwLCA4MCkiPgogICAgICAgIDwhLS0gTWFpbiBXaW5kb3cgUHJvZmlsZSAtLT4KICAgICAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMyMCIgcng9IjEyIiBmaWxsPSIjMTExMDBmIiBzdHJva2U9IiMzMjMxMzAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC45Ii8+CiAgICAgICAgCiAgICAgICAgPCEtLSBXaW5kb3cgSGVhZGVyIC0tPgogICAgICAgIDxwYXRoIGQ9Ik0gMCwxMiBBIDEyLDEyIDAgMCAxIDEyLDAgTCA0ODgsMCBBIDEyLDEyIDAgMCAxIDUwMCwxMiBMIDUwMCw0MCBMIDAsNDAgWiIgZmlsbD0iIzIwMWYxZSIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iMjAiIHI9IjYiIGZpbGw9IiNlODExMjMiIG9wYWNpdHk9IjAuOCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjQ1IiBjeT0iMjAiIHI9IjYiIGZpbGw9IiNmZmI5MDAiIG9wYWNpdHk9IjAuOCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjY1IiBjeT0iMjAiIHI9IjYiIGZpbGw9IiMxMDdjNDEiIG9wYWNpdHk9IjAuOCIvPgogICAgICAgIDxyZWN0IHg9IjE4MCIgeT0iMTIiIHdpZHRoPSIxNDAiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSIjMjkyODI3Ii8+CiAgICAgICAgCiAgICAgICAgPCEtLSBTaWRlYmFyIE1vY2sgLS0+CiAgICAgICAgPHJlY3QgeD0iMTUiIHk9IjYwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjI0MCIgcng9IjYiIGZpbGw9IiMyMDFmMWUiIG9wYWNpdHk9IjAuNyIvPgogICAgICAgIDxyZWN0IHg9IjI1IiB5PSI4MCIgd2lkdGg9IjcwIiBoZWlnaHQ9IjEyIiByeD0iNCIgZmlsbD0iIzAwNzhkNCIgb3BhY2l0eT0iMC40Ii8+CiAgICAgICAgPHJlY3QgeD0iMjUiIHk9IjExMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjEwIiByeD0iMyIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgPHJlY3QgeD0iMjUiIHk9IjEzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjEwIiByeD0iMyIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgPHJlY3QgeD0iMjUiIHk9IjE2MCIgd2lkdGg9Ijc1IiBoZWlnaHQ9IjEwIiByeD0iMyIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgCiAgICAgICAgPCEtLSBNYWluIENvbnRlbnQgQXJlYTogU2hhcmRzL0dyaWRzIHJlcHJlc2VudGluZyBidWlsZGluZyBVSSAtLT4KICAgICAgICA8cmVjdCB4PSIxNDUiIHk9IjYwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjEzMCIgcng9IjgiIGZpbGw9IiMyMDFmMWUiIG9wYWNpdHk9IjAuNyIvPgogICAgICAgIDxyZWN0IHg9IjE2NSIgeT0iODAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTYiIHJ4PSI0IiBmaWxsPSJ1cmwoI2dyYWQxKSIgb3BhY2l0eT0iMC44Ii8+CiAgICAgICAgPHJlY3QgeD0iMTY1IiB5PSIxMTUiIHdpZHRoPSIyMjAiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNhMTlmOWQiIG9wYWNpdHk9IjAuNCIvPgogICAgICAgIDxyZWN0IHg9IjE2NSIgeT0iMTM1IiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjYTE5ZjlkIiBvcGFjaXR5PSIwLjIiLz4KICAgICAgICA8cmVjdCB4PSIxNjUiIHk9IjE1NSIgd2lkdGg9IjE4MCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC4yIi8+CiAgICAgICAgCiAgICAgICAgPCEtLSBJbnRlcmFjdGl2ZS9HcmlkIEVsZW1lbnRzIEJvdHRvbSAtLT4KICAgICAgICA8cmVjdCB4PSIxNDUiIHk9IjIwNSIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5NSIgcng9IjgiIGZpbGw9IiMyMDFmMWUiIG9wYWNpdHk9IjAuNyIvPgogICAgICAgIDxjaXJjbGUgY3g9IjE4NSIgY3k9IjI0MCIgcj0iMjAiIGZpbGw9IiMxMDdjNDEiIG9wYWNpdHk9IjAuMyIvPgogICAgICAgIDxyZWN0IHg9IjE2NSIgeT0iMjc1IiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwIiByeD0iNCIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC40Ii8+CiAgICAgICAgCiAgICAgICAgPHJlY3QgeD0iMzI1IiB5PSIyMDUiIHdpZHRoPSIxNjAiIGhlaWdodD0iOTUiIHJ4PSI4IiBmaWxsPSIjMjAxZjFlIiBvcGFjaXR5PSIwLjciLz4KICAgICAgICA8cGF0aCBkPSJNIDM0NSwyNTUgTCAzODUsMjI1IEwgNDI1LDI0NSBMIDQ2NSwyMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwNzhkNCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICA8cmVjdCB4PSIzNDUiIHk9IjI3NSIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEwIiByeD0iNCIgZmlsbD0iI2ExOWY5ZCIgb3BhY2l0eT0iMC40Ii8+CiAgICA8L2c+CgogICAgPCEtLSBBbmltYXRlZC9HZWFyL0NvbnN0cnVjdGlvbiBvdmVybGF5IGljb24gLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MjAsIDM2MCkiPgogICAgICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI1NSIgZmlsbD0idXJsKCNncmFkMSkiIG9wYWNpdHk9IjAuMTUiLz4KICAgICAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNncmFkMSkiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWRhc2hhcnJheT0iMTIgNiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dyYWQxKSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgICA8L2c+CiAgICAKICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCwgNDAwKSI+CiAgICAgICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjM1IiBmaWxsPSJ1cmwoI2dyYWQxKSIgb3BhY2l0eT0iMC4xIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ3JhZDEpIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1kYXNoYXJyYXk9IjggNCIvPgogICAgPC9nPgo8L3N2Zz4K"
+          alt="Dashboard UI Layout ongoing construction graphic"
+        />
       </div>
 
+      <!-- Copywriting -->
       <h1>Something missing? I'm building it.</h1>
       <p>
         My new portfolio is currently under construction. I am crafting a
@@ -143,6 +185,7 @@
         layouts, and optimized components. Stay tuned!
       </p>
 
+      <!-- Technical Footprint -->
       <div class="footer-tech">
         <span class="tech-tag">React</span>
         <span class="tech-tag">TypeScript</span>
