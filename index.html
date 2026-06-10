@@ -1,13 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>RicardoTrejoSanjuan.github.io</title>
-</head>
-<body>
-    <h1>Hola Mundo!!</h1>
-    <h2>GitHub Pages</h2>
-</body>
+    <title>Portfolio under construction</title>
+    <style>
+      :root {
+        --bg-primary: #11100f;
+        --bg-secondary: #201f1e;
+        --text-primary: #ffffff;
+        --text-secondary: #a19f9d;
+        --accent-blue: #0078d4;
+        --font-stack: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: var(--font-stack);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border: 1px solid #292827;
+        border-radius: 16px;
+        padding: 40px 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        background-color: rgba(0, 120, 212, 0.1);
+        border: 1px solid rgba(0, 120, 212, 0.3);
+        color: #2899f5;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent-blue);
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: pulse 2s infinite;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, #ffffff 0%, #a19f9d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        max-width: 540px;
+        margin: 0 auto 35px auto;
+        line-height: 1.6;
+      }
+
+      .footer-tech {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        border-top: 1px solid #292827;
+        padding-top: 25px;
+      }
+
+      .tech-tag {
+        font-size: 12px;
+        color: #797775;
+        background-color: #11100f;
+        padding: 4px 10px;
+        border-radius: 4px;
+        border: 1px solid #292827;
+        font-family: monospace;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(0, 120, 212, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 8px rgba(0, 120, 212, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(0, 120, 212, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="status-badge">
+        <span class="status-dot"></span>Development In Progress
+      </div>
+
+      <div class="image-container">
+        <img src="data:image/svg+xml;base64,..." alt="In Progress" />
+      </div>
+
+      <h1>Something missing? I'm building it.</h1>
+      <p>
+        My new portfolio is currently under construction. I am crafting a
+        high-fidelity showcase featuring clean architecture, dynamic data
+        layouts, and optimized components. Stay tuned!
+      </p>
+
+      <div class="footer-tech">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Vite</span>
+        <span class="tech-tag">Clean Arch</span>
+      </div>
+    </div>
+  </body>
 </html>
