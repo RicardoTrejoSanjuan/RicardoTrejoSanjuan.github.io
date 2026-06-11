@@ -131,7 +131,8 @@ export function HeroSection() {
                 <Download className="w-5 h-5" />
               </motion.button> */}
               <motion.a
-                href={`${import.meta.env.BASE_URL}/Ricardo_Trejo_CV.pdf`}
+                // href={`${import.meta.env.BASE_URL}/Ricardo_Trejo_CV.pdf`}
+                href={`https://github.com/RicardoTrejoSanjuan/RicardoTrejoSanjuan.github.io/blob/main/public/Ricardo_Trejo_CV.pdf`}
                 download="Ricardo_Trejo_CV.pdf"
                 className="px-8 py-4 rounded-2xl border-2 border-primary/30 text-primary font-semibold flex items-center justify-center gap-2 hover:bg-primary/5 backdrop-blur-xl transition-all"
               >
