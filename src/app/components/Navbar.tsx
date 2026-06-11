@@ -5,7 +5,7 @@ export function Navbar() {
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(11, 15, 25, 0.0)", "rgba(11, 15, 25, 0.95)"]
+    ["rgba(11, 15, 25, 0.0)", "rgba(11, 15, 25, 0.95)"],
   );
   const borderOpacity = useTransform(scrollY, [0, 100], [0, 0.2]);
 
@@ -20,7 +20,10 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       style={{
         backgroundColor,
-        borderBottomColor: useTransform(borderOpacity, (o) => `rgba(59, 130, 246, ${o})`)
+        borderBottomColor: useTransform(
+          borderOpacity,
+          (o) => `rgba(59, 130, 246, ${o})`,
+        ),
       }}
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl border-b"
     >
@@ -56,30 +59,43 @@ export function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            {["Home", "Skills", "Projects", "Experience", "Achievements"].map((item, i) => (
-              <motion.button
-                key={item}
-                onClick={() => scrollToSection(item === "Home" ? "hero" : item === "Achievements" ? "metrics" : item.toLowerCase())}
-                className="text-muted-foreground hover:text-foreground transition-colors relative group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item}
-                <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
-            ))}
+            {["Home", "Skills", "Projects", "Experience", "Achievements"].map(
+              (item) => (
+                <motion.button
+                  key={item}
+                  onClick={() =>
+                    scrollToSection(
+                      item === "Home"
+                        ? "hero"
+                        : item === "Achievements"
+                          ? "metrics"
+                          : item.toLowerCase(),
+                    )
+                  }
+                  className="text-muted-foreground hover:text-foreground transition-colors relative group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item}
+                  <motion.div
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              ),
+            )}
           </div>
 
           {/* CTA Button */}
           <motion.button
             onClick={() => scrollToSection("contact")}
             className="px-5 py-2.5 rounded-xl border-2 border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 backdrop-blur-xl relative overflow-hidden group"
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
+            }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10 font-semibold">Contact</span>

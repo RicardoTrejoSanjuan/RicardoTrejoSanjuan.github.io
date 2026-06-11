@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import { Mail, Linkedin, Github, GraduationCap, Send } from "lucide-react";
+import { Mail, GraduationCap, Send } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
 
 export function ContactFooter() {
   return (
@@ -17,7 +19,8 @@ export function ContactFooter() {
             Ready for your next project?
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Let's collaborate to build innovative technology solutions that drive your business into the future
+            Let's collaborate to build innovative technology solutions that
+            drive your business into the future
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -43,7 +46,7 @@ export function ContactFooter() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary hover:bg-primary/5 transition-all group"
           >
-            <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            <FaLinkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
               LinkedIn
             </span>
@@ -54,7 +57,7 @@ export function ContactFooter() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary hover:bg-primary/5 transition-all group"
           >
-            <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            <SiGithub className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
               GitHub
             </span>
@@ -85,7 +88,9 @@ export function ContactFooter() {
         {/* Footer Bottom */}
         <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
           <p>© 2026 Ricardo Trejo. All rights reserved.</p>
-          <p className="mt-2">Designed and developed with React, TypeScript and Tailwind CSS</p>
+          <p className="mt-2">
+            Designed and developed with React, TypeScript and Tailwind CSS
+          </p>
         </div>
       </div>
     </section>

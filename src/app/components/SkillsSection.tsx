@@ -21,7 +21,6 @@ import {
   Code,
   Paintbrush,
   Send,
-  Settings,
   Package,
   Boxes,
   Network,
@@ -43,7 +42,7 @@ const skillCategories = [
       { name: "Fluent UI", icon: Paintbrush },
       { name: "Material UI", icon: Paintbrush },
       { name: "CSS-in-JS", icon: FileJson },
-    ]
+    ],
   },
   {
     id: "architecture",
@@ -58,7 +57,7 @@ const skillCategories = [
       { name: "Webpack", icon: Package },
       { name: "Vite", icon: Zap },
       { name: "Monorepos", icon: Workflow },
-    ]
+    ],
   },
   {
     id: "backend",
@@ -74,7 +73,7 @@ const skillCategories = [
       { name: "OpenAI API", icon: Sparkles },
       { name: "Azure AI Search", icon: Search },
       { name: "RAG Pipelines", icon: Workflow },
-    ]
+    ],
   },
   {
     id: "tools",
@@ -89,18 +88,22 @@ const skillCategories = [
       { name: "VS Code", icon: Code2 },
       { name: "Figma", icon: Paintbrush },
       { name: "Postman", icon: Send },
-    ]
-  }
+    ],
+  },
 ];
 
 export function SkillsSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0.5]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 1, 1, 0.5],
+  );
   const y = useTransform(scrollYProgress, [0, 0.2, 1], [100, 0, -50]);
 
   return (
@@ -142,8 +145,8 @@ export function SkillsSection() {
                   value={category.id}
                   className={`px-6 py-3 rounded-lg border transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary ${
                     category.highlight
-                      ? 'border-primary/50 text-primary hover:bg-primary/10'
-                      : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/30'
+                      ? "border-primary/50 text-primary hover:bg-primary/10"
+                      : "border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -173,31 +176,31 @@ export function SkillsSection() {
                       transition={{
                         delay: index * 0.05,
                         type: "spring",
-                        stiffness: 100
+                        stiffness: 100,
                       }}
                       whileHover={{
                         scale: 1.05,
                         y: -5,
-                        transition: { type: "spring", stiffness: 400 }
+                        transition: { type: "spring", stiffness: 400 },
                       }}
                       className={`group p-5 rounded-2xl border backdrop-blur-xl cursor-pointer relative overflow-hidden ${
                         category.highlight
-                          ? 'border-primary/30 bg-primary/5 hover:border-primary hover:shadow-2xl hover:shadow-primary/30'
-                          : 'border-border bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-xl'
+                          ? "border-primary/30 bg-primary/5 hover:border-primary hover:shadow-2xl hover:shadow-primary/30"
+                          : "border-border bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-xl"
                       }`}
                     >
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-transparent transition-all duration-500"
-                      />
+                      <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-transparent transition-all duration-500" />
                       <div className="relative z-10 flex items-center gap-3">
                         <motion.div
                           whileHover={{ rotate: 360, scale: 1.2 }}
                           transition={{ duration: 0.6 }}
-                          className={`flex-shrink-0 ${category.highlight ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'}`}
+                          className={`flex-shrink-0 ${category.highlight ? "text-primary" : "text-muted-foreground group-hover:text-primary"}`}
                         >
                           <SkillIcon className="w-5 h-5" />
                         </motion.div>
-                        <span className={`${category.highlight ? 'text-primary font-semibold' : 'text-foreground font-medium'}`}>
+                        <span
+                          className={`${category.highlight ? "text-primary font-semibold" : "text-foreground font-medium"}`}
+                        >
                           {skill.name}
                         </span>
                       </div>

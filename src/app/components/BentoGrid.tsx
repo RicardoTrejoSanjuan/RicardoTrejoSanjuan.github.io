@@ -2,7 +2,13 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { Trophy, Brain, Layers, Zap, Code2, Sparkles } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
-function CountUpAnimation({ end, duration = 2 }: { end: number; duration?: number }) {
+function CountUpAnimation({
+  end,
+  duration = 2,
+}: {
+  end: number;
+  duration?: number;
+}) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -14,7 +20,7 @@ function CountUpAnimation({ end, duration = 2 }: { end: number; duration?: numbe
           setIsVisible(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (ref.current) {
@@ -52,7 +58,7 @@ const metrics = [
     description: "Building high-impact digital solutions",
     icon: Trophy,
     size: "large",
-    gradient: "from-primary/20 to-blue-500/10"
+    gradient: "from-primary/20 to-blue-500/10",
   },
   {
     title: "AI Specialist",
@@ -60,7 +66,7 @@ const metrics = [
     description: "Conversational agents and intelligent search",
     icon: Brain,
     size: "medium",
-    gradient: "from-purple-500/20 to-primary/10"
+    gradient: "from-purple-500/20 to-primary/10",
   },
   {
     title: "Scalable Architectures",
@@ -68,7 +74,7 @@ const metrics = [
     description: "Module Federation and distributed systems",
     icon: Layers,
     size: "medium",
-    gradient: "from-blue-500/20 to-primary/10"
+    gradient: "from-blue-500/20 to-primary/10",
   },
   {
     title: "Performance",
@@ -76,7 +82,7 @@ const metrics = [
     description: "60% improvement in load times",
     icon: Zap,
     size: "small",
-    gradient: "from-yellow-500/20 to-primary/10"
+    gradient: "from-yellow-500/20 to-primary/10",
   },
   {
     title: "Clean Code",
@@ -84,7 +90,7 @@ const metrics = [
     description: "SOLID, DRY, and design patterns",
     icon: Code2,
     size: "small",
-    gradient: "from-green-500/20 to-primary/10"
+    gradient: "from-green-500/20 to-primary/10",
   },
   {
     title: "Innovation",
@@ -92,21 +98,25 @@ const metrics = [
     description: "Always at the forefront",
     icon: Sparkles,
     size: "small",
-    gradient: "from-pink-500/20 to-primary/10"
-  }
+    gradient: "from-pink-500/20 to-primary/10",
+  },
 ];
 
 export function BentoGrid() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section ref={ref} id="metrics" className="py-24 px-6 lg:px-8 relative overflow-hidden">
+    <section
+      ref={ref}
+      id="metrics"
+      className="py-24 px-6 lg:px-8 relative overflow-hidden"
+    >
       {/* Parallax Background */}
       <motion.div
         style={{ y }}
@@ -124,7 +134,9 @@ export function BentoGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Impact & Metrics</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Impact & Metrics
+          </h2>
           <p className="text-muted-foreground text-lg">
             Numbers that back technical excellence
           </p>
@@ -137,7 +149,10 @@ export function BentoGrid() {
             whileInView={{ scale: 1, opacity: 1, rotateY: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, type: "spring" }}
-            whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
+            whileHover={{
+              scale: 1.02,
+              transition: { type: "spring", stiffness: 300 },
+            }}
             className="md:col-span-2 lg:row-span-2 p-8 rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent backdrop-blur-xl hover:shadow-2xl hover:shadow-primary/20 transition-all group relative overflow-hidden"
           >
             {/* Animated Background */}
@@ -146,7 +161,11 @@ export function BentoGrid() {
               animate={{
                 backgroundPosition: ["0% 0%", "100% 100%"],
               }}
-              transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
             />
 
             <div className="h-full flex flex-col justify-between relative z-10">
@@ -166,9 +185,12 @@ export function BentoGrid() {
                 >
                   +<CountUpAnimation end={9} /> Years
                 </motion.h3>
-                <p className="text-2xl font-bold mb-2">Web Engineering Experience</p>
+                <p className="text-2xl font-bold mb-2">
+                  Web Engineering Experience
+                </p>
                 <p className="text-muted-foreground text-lg">
-                  Building high-impact digital solutions for companies of all sizes
+                  Building high-impact digital solutions for companies of all
+                  sizes
                 </p>
               </div>
               <div className="mt-8 flex gap-2">
@@ -178,8 +200,15 @@ export function BentoGrid() {
                     initial={{ scaleY: 0, opacity: 0 }}
                     whileInView={{ scaleY: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, type: "spring", stiffness: 100 }}
-                    whileHover={{ scaleY: 1.2, backgroundColor: "rgb(59, 130, 246)" }}
+                    transition={{
+                      delay: i * 0.1,
+                      type: "spring",
+                      stiffness: 100,
+                    }}
+                    whileHover={{
+                      scaleY: 1.2,
+                      backgroundColor: "rgb(59, 130, 246)",
+                    }}
                     className="flex-1 rounded-full bg-gradient-to-t from-primary/30 to-primary/10"
                     style={{ height: `${(i + 1) * 10}px` }}
                   />
@@ -194,12 +223,14 @@ export function BentoGrid() {
             whileInView={{ scale: 1, opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            whileHover={{ scale: 1.05, y: -5, transition: { type: "spring", stiffness: 400 } }}
+            whileHover={{
+              scale: 1.05,
+              y: -5,
+              transition: { type: "spring", stiffness: 400 },
+            }}
             className="p-8 rounded-3xl border border-border bg-card/50 backdrop-blur-xl hover:border-primary/50 transition-all hover:shadow-xl group relative overflow-hidden"
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            />
+            <motion.div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -207,9 +238,15 @@ export function BentoGrid() {
             >
               <Brain className="w-8 h-8 text-primary" />
             </motion.div>
-            <h4 className="text-3xl font-bold mb-2 relative z-10">{metrics[1].title}</h4>
-            <p className="text-primary font-semibold mb-2 relative z-10">{metrics[1].subtitle}</p>
-            <p className="text-muted-foreground relative z-10">{metrics[1].description}</p>
+            <h4 className="text-3xl font-bold mb-2 relative z-10">
+              {metrics[1].title}
+            </h4>
+            <p className="text-primary font-semibold mb-2 relative z-10">
+              {metrics[1].subtitle}
+            </p>
+            <p className="text-muted-foreground relative z-10">
+              {metrics[1].description}
+            </p>
           </motion.div>
 
           <motion.div
@@ -217,12 +254,14 @@ export function BentoGrid() {
             whileInView={{ scale: 1, opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ scale: 1.05, y: -5, transition: { type: "spring", stiffness: 400 } }}
+            whileHover={{
+              scale: 1.05,
+              y: -5,
+              transition: { type: "spring", stiffness: 400 },
+            }}
             className="p-8 rounded-3xl border border-border bg-card/50 backdrop-blur-xl hover:border-primary/50 transition-all hover:shadow-xl group relative overflow-hidden"
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            />
+            <motion.div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <motion.div
               whileHover={{ scale: 1.1, rotateY: 180 }}
               transition={{ duration: 0.6 }}
@@ -230,9 +269,15 @@ export function BentoGrid() {
             >
               <Layers className="w-8 h-8 text-primary" />
             </motion.div>
-            <h4 className="text-3xl font-bold mb-2 relative z-10">{metrics[2].title}</h4>
-            <p className="text-primary font-semibold mb-2 relative z-10">{metrics[2].subtitle}</p>
-            <p className="text-muted-foreground relative z-10">{metrics[2].description}</p>
+            <h4 className="text-3xl font-bold mb-2 relative z-10">
+              {metrics[2].title}
+            </h4>
+            <p className="text-primary font-semibold mb-2 relative z-10">
+              {metrics[2].subtitle}
+            </p>
+            <p className="text-muted-foreground relative z-10">
+              {metrics[2].description}
+            </p>
           </motion.div>
 
           {/* Small Cards */}
@@ -244,13 +289,19 @@ export function BentoGrid() {
                 initial={{ scale: 0.8, opacity: 0, y: 20 }}
                 whileInView={{ scale: 1, opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1, type: "spring" }}
-                whileHover={{ scale: 1.05, y: -8, transition: { type: "spring", stiffness: 400 } }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.3 + index * 0.1,
+                  type: "spring",
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -8,
+                  transition: { type: "spring", stiffness: 400 },
+                }}
                 className="p-6 rounded-3xl border border-border bg-card/50 backdrop-blur-xl hover:border-primary/50 transition-all hover:shadow-lg group relative overflow-hidden"
               >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                />
+                <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <motion.div
                   whileHover={{ rotate: [0, -15, 15, 0], scale: 1.2 }}
                   transition={{ duration: 0.5 }}
@@ -258,9 +309,15 @@ export function BentoGrid() {
                 >
                   <Icon className="w-6 h-6 text-primary" />
                 </motion.div>
-                <h4 className="text-xl font-bold mb-1 relative z-10">{metric.title}</h4>
-                <p className="text-primary font-semibold text-sm mb-2 relative z-10">{metric.subtitle}</p>
-                <p className="text-muted-foreground text-sm relative z-10">{metric.description}</p>
+                <h4 className="text-xl font-bold mb-1 relative z-10">
+                  {metric.title}
+                </h4>
+                <p className="text-primary font-semibold text-sm mb-2 relative z-10">
+                  {metric.subtitle}
+                </p>
+                <p className="text-muted-foreground text-sm relative z-10">
+                  {metric.description}
+                </p>
               </motion.div>
             );
           })}

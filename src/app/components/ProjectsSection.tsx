@@ -1,74 +1,87 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { ExternalLink, Github, Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 import { useRef } from "react";
 
 const projects = [
   {
     title: "AI-Powered Chat Assistant",
-    description: "Conversational AI agent built with LangChain and OpenAI GPT-4, featuring RAG pipeline for context-aware responses and document understanding.",
+    description:
+      "Conversational AI agent built with LangChain and OpenAI GPT-4, featuring RAG pipeline for context-aware responses and document understanding.",
     tech: ["React", "TypeScript", "LangChain", "OpenAI API", "Tailwind CSS"],
     image: "gradient-1",
     featured: true,
     links: {
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   },
   {
     title: "Micro-Frontend E-Commerce Platform",
-    description: "Scalable e-commerce solution using Module Federation, allowing independent deployment of product catalog, checkout, and admin modules.",
-    tech: ["React", "Module Federation", "Redux Toolkit", "Node.js", "PostgreSQL"],
+    description:
+      "Scalable e-commerce solution using Module Federation, allowing independent deployment of product catalog, checkout, and admin modules.",
+    tech: [
+      "React",
+      "Module Federation",
+      "Redux Toolkit",
+      "Node.js",
+      "PostgreSQL",
+    ],
     image: "gradient-2",
     featured: true,
     links: {
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   },
   {
     title: "Enterprise Design System",
-    description: "Comprehensive component library with 50+ React components, design tokens, and documentation built with Storybook and Figma integration.",
+    description:
+      "Comprehensive component library with 50+ React components, design tokens, and documentation built with Storybook and Figma integration.",
     tech: ["React", "TypeScript", "Storybook", "Tailwind CSS", "Figma"],
     image: "gradient-3",
     featured: false,
     links: {
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   },
   {
     title: "Real-time Analytics Dashboard",
-    description: "High-performance dashboard with real-time data visualization, featuring WebSocket connections and optimized rendering for large datasets.",
+    description:
+      "High-performance dashboard with real-time data visualization, featuring WebSocket connections and optimized rendering for large datasets.",
     tech: ["React", "Recharts", "WebSocket", "Express", "MongoDB"],
     image: "gradient-4",
     featured: false,
     links: {
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   },
   {
     title: "Smart Document Search",
-    description: "Intelligent document search engine using Azure AI Search and vector embeddings for semantic search across thousands of documents.",
+    description:
+      "Intelligent document search engine using Azure AI Search and vector embeddings for semantic search across thousands of documents.",
     tech: ["React", "Azure AI", "OpenAI", "Python", "FastAPI"],
     image: "gradient-5",
     featured: false,
     links: {
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   },
   {
     title: "Collaborative Code Editor",
-    description: "Real-time collaborative code editor with syntax highlighting, live cursors, and integrated terminal powered by WebRTC.",
+    description:
+      "Real-time collaborative code editor with syntax highlighting, live cursors, and integrated terminal powered by WebRTC.",
     tech: ["React", "Monaco Editor", "WebRTC", "Node.js", "Socket.io"],
     image: "gradient-6",
     featured: false,
     links: {
       github: "#",
-      demo: "#"
-    }
-  }
+      demo: "#",
+    },
+  },
 ];
 
 const gradients = {
@@ -77,17 +90,21 @@ const gradients = {
   "gradient-3": "from-orange-500/20 via-red-500/10 to-pink-500/5",
   "gradient-4": "from-cyan-500/20 via-blue-500/10 to-indigo-500/5",
   "gradient-5": "from-violet-500/20 via-purple-500/10 to-fuchsia-500/5",
-  "gradient-6": "from-amber-500/20 via-yellow-500/10 to-lime-500/5"
+  "gradient-6": "from-amber-500/20 via-yellow-500/10 to-lime-500/5",
 };
 
 export function ProjectsSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.95]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0.8, 1, 1, 0.95],
+  );
 
   return (
     <motion.section
@@ -104,9 +121,12 @@ export function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Featured Projects
+          </h2>
           <p className="text-muted-foreground text-lg">
-            A selection of my recent work showcasing technical expertise and innovation
+            A selection of my recent work showcasing technical expertise and
+            innovation
           </p>
         </motion.div>
 
@@ -121,14 +141,14 @@ export function ProjectsSection() {
                 duration: 0.8,
                 delay: index * 0.1,
                 type: "spring",
-                stiffness: 100
+                stiffness: 100,
               }}
               whileHover={{
                 y: -10,
-                transition: { type: "spring", stiffness: 400 }
+                transition: { type: "spring", stiffness: 400 },
               }}
               className={`group relative rounded-3xl border border-border bg-card/50 backdrop-blur-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-2xl ${
-                project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                project.featured ? "md:col-span-2 lg:col-span-1" : ""
               }`}
             >
               {/* Featured Badge */}
@@ -140,10 +160,10 @@ export function ProjectsSection() {
               )}
 
               {/* Visual Background */}
-              <div className={`h-48 bg-gradient-to-br ${gradients[project.image as keyof typeof gradients]} relative overflow-hidden`}>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"
-                />
+              <div
+                className={`h-48 bg-gradient-to-br ${gradients[project.image as keyof typeof gradients]} relative overflow-hidden`}
+              >
+                <motion.div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 <motion.div
                   className="absolute inset-0 bg-primary/10"
                   initial={{ opacity: 0, scale: 1.2 }}
@@ -201,7 +221,7 @@ export function ProjectsSection() {
                     href={project.links.github}
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <Github className="w-4 h-4" />
+                    <SiGithub className="w-4 h-4" />
                     Code
                   </a>
                   <a
