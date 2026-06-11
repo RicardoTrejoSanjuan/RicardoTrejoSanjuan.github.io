@@ -61,9 +61,9 @@ const metrics = [
     gradient: "from-primary/20 to-blue-500/10",
   },
   {
-    title: "AI Specialist",
-    subtitle: "RAG & LangChain",
-    description: "Conversational agents and intelligent search",
+    title: "AI Engineer",
+    subtitle: "Applications & Agents",
+    description: "Building intelligent applications with AI",
     icon: Brain,
     size: "medium",
     gradient: "from-purple-500/20 to-primary/10",

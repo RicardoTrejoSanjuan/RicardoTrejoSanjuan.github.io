@@ -41,7 +41,7 @@ export function ContactFooter() {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           <a
-            href="https://linkedin.com/in/ricardotrejo"
+            href="https://www.linkedin.com/in/ricardo-trejo-sanjuan-96616b153/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary hover:bg-primary/5 transition-all group"
@@ -52,7 +52,7 @@ export function ContactFooter() {
             </span>
           </a>
           <a
-            href="https://github.com/ricardotrejo"
+            href="https://github.com/RicardoTrejoSanjuan"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary hover:bg-primary/5 transition-all group"
@@ -63,7 +63,7 @@ export function ContactFooter() {
             </span>
           </a>
           <a
-            href="mailto:ricardo@example.com"
+            href="mailto:trejosanjuanricardo@gmail.com"
             className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary hover:bg-primary/5 transition-all group"
           >
             <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
