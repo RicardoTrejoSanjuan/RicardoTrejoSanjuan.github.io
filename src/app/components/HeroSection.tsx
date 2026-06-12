@@ -132,7 +132,7 @@ export function HeroSection() {
               </motion.button> */}
               {/* // href={`${import.meta.env.BASE_URL}/Ricardo_Trejo_CV.pdf`} */}
               <motion.a
-                href={`https://github.com/RicardoTrejoSanjuan/RicardoTrejoSanjuan.github.io/blob/main/public/Ricardo_Trejo_CV.pdf`}
+                href={`/Ricardo_Trejo_CV.pdf`}
                 download="Ricardo_Trejo_CV.pdf"
                 target="_blank"
                 className="px-8 py-4 rounded-2xl border-2 border-primary/30 text-primary font-semibold flex items-center justify-center gap-2 hover:bg-primary/5 backdrop-blur-xl transition-all"
