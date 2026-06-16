@@ -8,9 +8,11 @@ const experiences = [
     period: "2025 - Present",
     current: true,
     achievements: [
-      "Development of conversational AI agents using LangChain and OpenAI API",
-      "Scalable React architectures with micro-frontends and Module Federation",
-      "Integration of AI solutions in enterprise web applications",
+      "Built full-stack applications using React, TypeScript, Tailwind CSS, Node.js, and Express.",
+      "Integrated real-time AI chat experiences with scalable backend services.",
+      "Implemented responsive, accessible, and SEO-friendly user interfaces.",
+      "Integrated third-party APIs including authentication, analytics, and payment processing solutions.",
+      "Collaborated directly with clients from requirements gathering through production deployment.",
     ],
   },
   {

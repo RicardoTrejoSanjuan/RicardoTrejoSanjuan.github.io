@@ -5,96 +5,142 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "AI-Powered Chat Assistant",
+    id: 0,
+    title: "Around The U.S",
     description:
-      "Conversational AI agent built with LangChain and OpenAI GPT-4, featuring RAG pipeline for context-aware responses and document understanding.",
-    tech: ["React", "TypeScript", "LangChain", "OpenAI API", "Tailwind CSS"],
-    image: "gradient-1",
+      "Interactive photo-sharing web application built with TypeScript, Object-Oriented Programming (OOP), and modern front-end architecture. Features responsive design, reusable class-based components, form validation, dynamic card management, user profile editing, and modular popup interactions following BEM methodology and clean code principles.",
+    image: "/public/images/around.png",
     featured: true,
+    tech: ["HTML", "CSS", "TypeScript", "GitHub Pages"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/web_project_around",
+      demo: "https://ricardotrejosanjuan.github.io/web_project_around/",
     },
   },
   {
-    title: "Micro-Frontend E-Commerce Platform",
+    id: 1,
+    title: "Task Manager App",
     description:
-      "Scalable e-commerce solution using Module Federation, allowing independent deployment of product catalog, checkout, and admin modules.",
+      "Modern task management application built with React, TypeScript, and Redux Toolkit. Features task creation, completion tracking, drag-and-drop reordering, persistent local storage, dark mode support, and a fully responsive user experience across desktop and mobile devices.",
+    image: "/public/images/taskManagerApp.png",
+    featured: true,
     tech: [
       "React",
-      "Module Federation",
-      "Redux Toolkit",
-      "Node.js",
-      "PostgreSQL",
+      "REST API",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Netlify",
     ],
-    image: "gradient-2",
+    links: {
+      github: "https://github.com/RicardoTrejoSanjuan/task-manager-app",
+      demo: "https://tmapp-rt.netlify.app/",
+    },
+  },
+  {
+    id: 2,
+    title: "MixologyHub",
+    description:
+      "MixologyHub is an application that allows users to search for cocktails by name or ingredient and get detailed information about the cocktail.",
+    image: "/public/images/mixologyHub.png",
     featured: true,
+    tech: [
+      "React",
+      "REST API",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Netlify",
+    ],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/mixology-hub",
+      demo: "https://magnificent-bombolone-192394.netlify.app/",
     },
   },
   {
-    title: "Enterprise Design System",
+    id: 3,
+    title: "PetCare",
     description:
-      "Comprehensive component library with 50+ React components, design tokens, and documentation built with Storybook and Figma integration.",
-    tech: ["React", "TypeScript", "Storybook", "Tailwind CSS", "Figma"],
-    image: "gradient-3",
-    featured: false,
+      "PetCare is an intuitive application designed for veterinary clinics to streamline the process of managing patient information.",
+    image: "/public/images/petCare.png",
+    featured: true,
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/petCare",
+      demo: "https://wonderful-kataifi-cd77df.netlify.app/",
     },
   },
   {
-    title: "Real-time Analytics Dashboard",
+    id: 4,
+    title: "CalorieTrack",
     description:
-      "High-performance dashboard with real-time data visualization, featuring WebSocket connections and optimized rendering for large datasets.",
-    tech: ["React", "Recharts", "WebSocket", "Express", "MongoDB"],
-    image: "gradient-4",
-    featured: false,
+      "CalorieTrack is a web application designed to help users track their daily caloric intake and expenditure. Users can easily add foods and physical activities to a list, specifying the number of calories consumed or burned",
+    image: "/public/images/calorieTrack.png",
+    featured: true,
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/calorie-track",
+      demo: "https://gentle-puppy-0e63e3.netlify.app/",
     },
   },
   {
-    title: "Smart Document Search",
+    id: 5,
+    title: "Tip Calculator",
     description:
-      "Intelligent document search engine using Azure AI Search and vector embeddings for semantic search across thousands of documents.",
-    tech: ["React", "Azure AI", "OpenAI", "Python", "FastAPI"],
-    image: "gradient-5",
+      "Tip Calculator is a user-friendly app that helps you quickly calculate tips based on your total bill.",
+    image: "/public/images/calculator.png",
     featured: false,
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/gratuity-calculator",
+      demo: "https://rococo-sherbet-b25cad.netlify.app/",
     },
   },
   {
-    title: "Collaborative Code Editor",
+    id: 6,
+    title: "WeatherNow",
     description:
-      "Real-time collaborative code editor with syntax highlighting, live cursors, and integrated terminal powered by WebRTC.",
-    tech: ["React", "Monaco Editor", "WebRTC", "Node.js", "Socket.io"],
-    image: "gradient-6",
-    featured: false,
+      "WeatherNow is a React application that allows you to quickly and easily check the current weather for any city. ",
+    image: "/public/images/weather.png",
+    featured: true,
+    tech: [
+      "React",
+      "REST API",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Netlify",
+    ],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/RicardoTrejoSanjuan/weathernow",
+      demo: "https://cheery-caramel-096f92.netlify.app/",
+    },
+  },
+  {
+    id: 7,
+    title: "GuitarLA - Shopping Cart",
+    description:
+      "This project is a shopping cart application built with React and TypeScript, using Vite as the build tool.",
+    image: "/public/images/guitarLa.png",
+    featured: false,
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "REST API",
+      "Netlify",
+    ],
+    links: {
+      github: "https://github.com/RicardoTrejoSanjuan/guitarLa-ts",
+      demo: "https://heartfelt-druid-c67a72.netlify.app/",
     },
   },
 ];
 
-const gradients = {
-  "gradient-1": "from-blue-500/20 via-purple-500/10 to-pink-500/5",
-  "gradient-2": "from-green-500/20 via-emerald-500/10 to-teal-500/5",
-  "gradient-3": "from-orange-500/20 via-red-500/10 to-pink-500/5",
-  "gradient-4": "from-cyan-500/20 via-blue-500/10 to-indigo-500/5",
-  "gradient-5": "from-violet-500/20 via-purple-500/10 to-fuchsia-500/5",
-  "gradient-6": "from-amber-500/20 via-yellow-500/10 to-lime-500/5",
-};
-
 export function ProjectsSection() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -109,11 +155,12 @@ export function ProjectsSection() {
   return (
     <motion.section
       ref={ref}
-      style={{ scale }}
       id="projects"
+      style={{ scale }}
       className="py-24 px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -124,18 +171,20 @@ export function ProjectsSection() {
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Featured Projects
           </h2>
+
           <p className="text-muted-foreground text-lg">
             A selection of my recent work showcasing technical expertise and
             innovation
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0, rotateX: 10 }}
-              whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
+            <motion.article
+              key={project.id}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 0.8,
@@ -159,39 +208,19 @@ export function ProjectsSection() {
                 </div>
               )}
 
-              {/* Visual Background */}
-              <div
-                className={`h-48 bg-gradient-to-br ${gradients[project.image as keyof typeof gradients]} relative overflow-hidden`}
-              >
-                <motion.div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                <motion.div
-                  className="absolute inset-0 bg-primary/10"
-                  initial={{ opacity: 0, scale: 1.2 }}
-                  whileHover={{ opacity: 1, scale: 1 }}
+              {/* Project Image */}
+              <div className="relative h-56 overflow-hidden">
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                 />
-                {/* Animated Particles */}
-                <div className="absolute inset-0">
-                  {Array.from({ length: 20 }).map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-1 h-1 bg-primary/30 rounded-full"
-                      initial={{
-                        x: Math.random() * 100 + "%",
-                        y: Math.random() * 100 + "%",
-                      }}
-                      animate={{
-                        y: [null, Math.random() * -100 - 20 + "%"],
-                        opacity: [0, 1, 0],
-                      }}
-                      transition={{
-                        duration: Math.random() * 3 + 2,
-                        repeat: Infinity,
-                        delay: Math.random() * 2,
-                      }}
-                    />
-                  ))}
-                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+
+                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
               </div>
 
               {/* Content */}
@@ -219,6 +248,7 @@ export function ProjectsSection() {
                 <div className="flex gap-4 pt-2">
                   <a
                     href={project.links.github}
+                    target="_blank"
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <SiGithub className="w-4 h-4" />
@@ -226,6 +256,7 @@ export function ProjectsSection() {
                   </a>
                   <a
                     href={project.links.demo}
+                    target="_blank"
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -233,7 +264,7 @@ export function ProjectsSection() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

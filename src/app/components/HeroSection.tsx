@@ -84,9 +84,11 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-lg text-muted-foreground leading-relaxed max-w-2xl"
             >
-              Software Engineer with nearly 10 years of experience building
-              scalable web applications, micro frontends, enterprise platforms,
-              and full-stack solutions.
+              Experienced Software Engineer with nearly 10 years of experience
+              developing scalable web applications and AI-powered solutions. My
+              strengths include teamwork, problem-solving, and adapting quickly
+              to new environments. I am looking for a position where I can
+              contribute my skills and continue to grow professionally.
             </motion.p>
 
             <motion.div
@@ -122,19 +124,12 @@ export function HeroSection() {
                   transition={{ duration: 0.3 }}
                 />
               </motion.button>
-              {/* <motion.button
-                whileHover={{ scale: 1.05, borderColor: "rgb(59, 130, 246)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-2xl border-2 border-primary/30 text-primary font-semibold flex items-center justify-center gap-2 hover:bg-primary/5 backdrop-blur-xl transition-all"
-              >
-                Download CV
-                <Download className="w-5 h-5" />
-              </motion.button> */}
-              {/* // href={`${import.meta.env.BASE_URL}/Ricardo_Trejo_CV.pdf`} */}
               <motion.a
                 href={`/Ricardo_Trejo_CV.pdf`}
                 download="Ricardo_Trejo_CV.pdf"
                 target="_blank"
+                whileHover={{ scale: 1.05, borderColor: "rgb(59, 130, 246)" }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 rounded-2xl border-2 border-primary/30 text-primary font-semibold flex items-center justify-center gap-2 hover:bg-primary/5 backdrop-blur-xl transition-all"
               >
                 Download Resume
