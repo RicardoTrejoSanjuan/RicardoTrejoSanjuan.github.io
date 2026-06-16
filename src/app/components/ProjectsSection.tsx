@@ -42,7 +42,7 @@ const projects = [
     title: "MixologyHub",
     description:
       "MixologyHub is an application that allows users to search for cocktails by name or ingredient and get detailed information about the cocktail.",
-    image: "/public/images/mixologyHub.png",
+    image: "/images/mixologyHub.png",
     featured: true,
     tech: [
       "React",
@@ -62,7 +62,7 @@ const projects = [
     title: "PetCare",
     description:
       "PetCare is an intuitive application designed for veterinary clinics to streamline the process of managing patient information.",
-    image: "/public/images/petCare.png",
+    image: "/images/petCare.png",
     featured: true,
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
@@ -75,7 +75,7 @@ const projects = [
     title: "CalorieTrack",
     description:
       "CalorieTrack is a web application designed to help users track their daily caloric intake and expenditure. Users can easily add foods and physical activities to a list, specifying the number of calories consumed or burned",
-    image: "/public/images/calorieTrack.png",
+    image: "/images/calorieTrack.png",
     featured: true,
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
@@ -88,7 +88,7 @@ const projects = [
     title: "Tip Calculator",
     description:
       "Tip Calculator is a user-friendly app that helps you quickly calculate tips based on your total bill.",
-    image: "/public/images/calculator.png",
+    image: "/images/calculator.png",
     featured: false,
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Netlify"],
     links: {
@@ -101,7 +101,7 @@ const projects = [
     title: "WeatherNow",
     description:
       "WeatherNow is a React application that allows you to quickly and easily check the current weather for any city. ",
-    image: "/public/images/weather.png",
+    image: "/images/weather.png",
     featured: true,
     tech: [
       "React",
@@ -121,7 +121,7 @@ const projects = [
     title: "GuitarLA - Shopping Cart",
     description:
       "This project is a shopping cart application built with React and TypeScript, using Vite as the build tool.",
-    image: "/public/images/guitarLa.png",
+    image: "/images/guitarLa.png",
     featured: false,
     tech: [
       "React",
