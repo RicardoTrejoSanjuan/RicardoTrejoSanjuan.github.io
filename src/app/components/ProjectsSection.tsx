@@ -9,7 +9,7 @@ const projects = [
     title: "Around The U.S",
     description:
       "Interactive photo-sharing web application built with TypeScript, Object-Oriented Programming (OOP), and modern front-end architecture. Features responsive design, reusable class-based components, form validation, dynamic card management, user profile editing, and modular popup interactions following BEM methodology and clean code principles.",
-    image: "/public/images/around.png",
+    image: "/images/around.png",
     featured: true,
     tech: ["HTML", "CSS", "TypeScript", "GitHub Pages"],
     links: {
@@ -22,7 +22,7 @@ const projects = [
     title: "Task Manager App",
     description:
       "Modern task management application built with React, TypeScript, and Redux Toolkit. Features task creation, completion tracking, drag-and-drop reordering, persistent local storage, dark mode support, and a fully responsive user experience across desktop and mobile devices.",
-    image: "/public/images/taskManagerApp.png",
+    image: "/images/taskManagerApp.png",
     featured: true,
     tech: [
       "React",
